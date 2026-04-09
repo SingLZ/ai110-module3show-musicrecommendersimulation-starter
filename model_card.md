@@ -166,7 +166,7 @@ More details on [**Profile analysis**](PROFILE_COMPARISON_ANALYSIS.md)
 
 **Hypothesis:** Reducing genre weight from 3.0 → 1.5 and increasing mood weight from 2.0 → 3.5 creates cross-genre recommendations while keeping mood matching strict.
 
-**Results:** ✅ Hypothesis confirmed
+**Results:** Hypothesis confirmed
 - "Workout Enthusiast" in baseline: "Gym Hero" (#1, 6.96), "Thunder in the Sky" (#2, 5.44), "Storm Runner" (#3, 5.43)
 - "Workout Enthusiast" with new weights: "Gym Hero" (#1, 6.96), "Thunder in the Sky" (#2, 6.19), "Storm Runner" (#3, 6.18)
 - Thunder and Storm moved much closer in score, suggesting people wanting intense-mood music would get better recommendations across genres

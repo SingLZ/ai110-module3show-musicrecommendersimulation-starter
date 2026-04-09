@@ -14,7 +14,7 @@ This document compares recommendations across different user profiles to underst
 - Acoustic: No
 
 **Top 3 Recommendations:**
-1. ✅ "Sunrise City" (pop, happy, 0.82 energy) — **Score: 6.88/10.0** — PERFECT match
+1. "Sunrise City" (pop, happy, 0.82 energy) — **Score: 6.88/10.0** — PERFECT match
 2. "Neon Dreams" (electronic, happy, 0.88 energy) — Score: 5.34/10.0 — Happy but wrong genre
 3. "Rooftop Lights" (indie pop, happy, 0.76 energy) — Score: 5.26/10.0 — Happy but close genre
 
@@ -25,7 +25,7 @@ This document compares recommendations across different user profiles to underst
 - Acoustic: Yes
 
 **Top 3 Recommendations:**
-1. ✅ "Midnight Sadness" (pop, sad, 0.38 energy) — **Score: 6.74/10.0** — PERFECT match
+1. "Midnight Sadness" (pop, sad, 0.38 energy) — **Score: 6.74/10.0** — PERFECT match
 2. "Blue Note Blues" (blues, sad, 0.44 energy) — Score: 5.33/10.0 — Sad but wrong genre
 3. "Sunrise City" (pop, happy, 0.82 energy) — Score: 3.93/10.0 — SAME pop as #1, but different mood!
 
@@ -49,8 +49,8 @@ Both profiles like pop, but they get **completely different recommendations**:
 - Acoustic: Yes
 
 **Top 3 Recommendations:**
-1. ✅ "Library Rain" (lofi, chill, 0.35 energy, 0.86 acoustic) — **Score: 6.85/10.0**
-2. ✅ "Midnight Coding" (lofi, chill, 0.42 energy, 0.71 acoustic) — **Score: 6.82/10.0**
+1. "Library Rain" (lofi, chill, 0.35 energy, 0.86 acoustic) — **Score: 6.85/10.0**
+2. "Midnight Coding" (lofi, chill, 0.42 energy, 0.71 acoustic) — **Score: 6.82/10.0**
 3. "Spacewalk Thoughts" (ambient, chill, 0.28 energy, 0.92 acoustic) — Score: 5.28/10.0
 
 ### Profile B: Intense Rock Fan
@@ -60,7 +60,7 @@ Both profiles like pop, but they get **completely different recommendations**:
 - Acoustic: No
 
 **Top 3 Recommendations:**
-1. ✅ "Storm Runner" (rock, intense, 0.91 energy, 0.10 acoustic) — **Score: 6.93/10.0**
+1. "Storm Runner" (rock, intense, 0.91 energy, 0.10 acoustic) — **Score: 6.93/10.0**
 2. "Gym Hero" (pop, intense, 0.93 energy, 0.05 acoustic) — Score: 5.43/10.0
 3. "Thunder in the Sky" (metal, intense, 0.95 energy, 0.04 acoustic) — Score: 5.40/10.0
 
@@ -86,7 +86,7 @@ This shows the energy distance formula is working perfectly. The algorithm creat
 - Energy: 0.80
 
 **Top 3 Recommendations:**
-1. ✅ "Sunrise City" (pop, happy, 0.82 energy) — **Score: 6.88/10.0** — Perfect match
+1. "Sunrise City" (pop, happy, 0.82 energy) — **Score: 6.88/10.0** — Perfect match
 2. "Neon Dreams" (electronic, happy, 0.88) — Score: 5.34
 3. "Rooftop Lights" (indie pop, happy, 0.76) — Score: 5.26
 
@@ -96,7 +96,7 @@ This shows the energy distance formula is working perfectly. The algorithm creat
 - Energy: 0.92
 
 **Top 3 Recommendations:**
-1. ✅ "Gym Hero" (pop, intense, 0.93 energy) — **Score: 6.96/10.0** — Perfect match
+1. "Gym Hero" (pop, intense, 0.93 energy) — **Score: 6.96/10.0** — Perfect match
 2. "Thunder in the Sky" (metal, intense, 0.95) — Score: 5.44
 3. "Storm Runner" (rock, intense, 0.91) — Score: 5.43
 
@@ -125,7 +125,7 @@ Same song, same genre, opposite moods = completely different ranking. **MOOD IS 
 - Acoustic: **YES**
 
 **Top 3 Recommendations:**
-1. ✅ "Acoustic Breeze" (acoustic, relaxed, 0.32 energy, 0.93 acoustic) — **Score: 6.96/10.0**
+1. "Acoustic Breeze" (acoustic, relaxed, 0.32 energy, 0.93 acoustic) — **Score: 6.96/10.0**
 2. "Coffee Shop Stories" (jazz, relaxed, 0.37 energy, 0.89 acoustic) — Score: 5.37
 3. "Desert Soul" (folk, contemplative, 0.35 energy, 0.91 acoustic) — Score: 3.41
 
@@ -136,7 +136,7 @@ Same song, same genre, opposite moods = completely different ranking. **MOOD IS 
 - Acoustic: **NO**
 
 **Top 3 Recommendations:**
-1. ✅ "Neon Dreams" (electronic, happy, 0.88 energy, 0.08 acoustic) — **Score: 6.96/10.0**
+1. "Neon Dreams" (electronic, happy, 0.88 energy, 0.08 acoustic) — **Score: 6.96/10.0**
 2. "Sunrise City" (pop, happy, 0.82 energy, 0.18 acoustic) — Score: 5.32
 3. "Rooftop Lights" (indie pop, happy, 0.76 energy, 0.35 acoustic) — Score: 5.15
 

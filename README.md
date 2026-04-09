@@ -184,9 +184,9 @@ You can add more tests in `tests/test_recommender.py`.
 
 ![Intense Rock](IntenseRock.png)
 
-## Phase 4: Evaluation & Analysis
 
-### Comprehensive System Evaluation ✅
+
+### Comprehensive System Evaluation 
 
 The recommender has been tested with **8 diverse user profiles** to understand how well it performs and identify strengths/weaknesses:
 
@@ -207,7 +207,7 @@ python -m src.main
 
 This will test all 8 profiles and show their top 5 recommendations with detailed scoring explanations.
 
-### Experiment: Weight Sensitivity Testing ✅
+### Experiment: Weight Sensitivity Testing 
 
 An experimental weight configuration was tested to understand how changes to the scoring formula affect recommendations:
 
@@ -226,21 +226,21 @@ python -m src.main_experiment
 
 **Hypothesis:** Mood-focused weights would increase cross-genre recommendations while maintaining mood matching.
 
-**Result:** ✅ Confirmed — Songs from different genres with matching moods scored much more competitively with genre-matching songs.
+**Result:** Confirmed — Songs from different genres with matching moods scored much more competitively with genre-matching songs.
 
 ### Key Findings
 
 **Strengths Discovered:**
-✅ Mood matching effectively filters recommendations by emotional vibe  
-✅ Energy similarity formula perfectly captures "target energy" concept  
-✅ Multi-genre, same-mood users receive good diversity  
-✅ Detailed explanations make recommendations transparent  
+ Mood matching effectively filters recommendations by emotional vibe  
+ Energy similarity formula perfectly captures "target energy" concept  
+ Multi-genre, same-mood users receive good diversity  
+ Detailed explanations make recommendations transparent  
 
 **Limitations Discovered:**
-⚠️ Genre weight (3.0) dominates system, creating filter bubbles  
-⚠️ Mood is binary (exact match only)—similar moods like "relaxed" vs "contemplative" get zero credit  
-⚠️ Small 20-song catalog creates artificial scarcity for niche genres (only 1 acoustic, 1 jazz, 1 blues song)  
-⚠️ Acoustic preference weight (0.5) is too weak—rarely influences top recommendations  
+ Genre weight (3.0) dominates system, creating filter bubbles  
+ Mood is binary (exact match only)—similar moods like "relaxed" vs "contemplative" get zero credit  
+ Small 20-song catalog creates artificial scarcity for niche genres (only 1 acoustic, 1 jazz, 1 blues song)  
+ Acoustic preference weight (0.5) is too weak—rarely influences top recommendations  
 
 **Detailed Analysis:**
 See [PROFILE_COMPARISON_ANALYSIS.md](PROFILE_COMPARISON_ANALYSIS.md) for in-depth comparisons of how different user profiles receive different recommendations and why the algorithm produces these results.
@@ -251,7 +251,7 @@ See [Model Card](model_card.md) for complete evaluation methodology, results, an
 
 ## Implementation & Results
 
-**✅ Tests Passing:** All unit tests pass successfully
+** Tests Passing:** All unit tests pass successfully
 
 **Algorithm Performance:**
 - Alex (lofi/chill) successfully gets lofi songs with high acousticness
