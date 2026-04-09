@@ -137,14 +137,17 @@ Each component works differently:
 
 | Profile | Genre | Mood | Energy | Result |
 |---------|-------|------|--------|--------|
-| Happy Pop Enthusiast | pop | happy | 0.80 | ✅ Excellent — "Sunrise City" perfectly matches all factors |
-| Chill Lofi Listener | lofi | chill | 0.40 | ✅ Excellent — "Library Rain" and "Midnight Coding" both perfect |
-| Intense Rock Fan | rock | intense | 0.90 | ⚠️ Good, but gets pop alternatives for mood (not rock) |
-| Workout Enthusiast | pop | intense | 0.92 | ✅ Excellent — "Gym Hero" is a perfect match |
-| Acoustic Soul Seeker | acoustic | relaxed | 0.32 | ❌ Limited — only 1 perfect match, then forced to similar genres |
-| Energetic EDM Dancer | electronic | happy | 0.88 | ✅ Good — "Neon Dreams" matches, but limited electronic songs |
-| Jazz & Blues Lover | jazz | relaxed | 0.37 | ⚠️ Adequate — "Coffee Shop Stories" matches, but limited diversity |
-| Sad Contemplative Soul | pop | sad | 0.40 | ⚠️ Good match on "Midnight Sadness," but pop dominance limits mood diversity |
+| Happy Pop Enthusiast | pop | happy | 0.80 | Excellent — "Sunrise City" perfectly matches all factors |
+| Chill Lofi Listener | lofi | chill | 0.40 | Excellent — "Library Rain" and "Midnight Coding" both perfect |
+| Intense Rock Fan | rock | intense | 0.90 | Good, but gets pop alternatives for mood (not rock) |
+| Workout Enthusiast | pop | intense | 0.92 | Excellent — "Gym Hero" is a perfect match |
+| Acoustic Soul Seeker | acoustic | relaxed | 0.32 | Limited — only 1 perfect match, then forced to similar genres |
+| Energetic EDM Dancer | electronic | happy | 0.88 | Good — "Neon Dreams" matches, but limited electronic songs |
+| Jazz & Blues Lover | jazz | relaxed | 0.37 | Adequate — "Coffee Shop Stories" matches, but limited diversity |
+| Sad Contemplative Soul | pop | sad | 0.40 | Good match on "Midnight Sadness," but pop dominance limits mood diversity |
+
+
+More details on [**Profile analysis**](PROFILE_COMPARISON_ANALYSIS.md)
 
 ### **Key Findings**
 
