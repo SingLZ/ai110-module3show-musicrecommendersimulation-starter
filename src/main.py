@@ -13,6 +13,45 @@ from .recommender import load_songs, recommend_songs
 import os
 
 
+def format_recommendations_table(recommendations: list, profile_name: str) -> str:
+    """
+    Formats recommendations as a readable ASCII table for terminal display.
+    
+    Args:
+        recommendations: List of (song_dict, score, explanation) tuples
+        profile_name: Name of the user profile
+    
+    Returns:
+        Formatted string table
+    """
+    # Calculate column widths
+    rank_width = 3
+    title_width = 25
+    artist_width = 20
+    score_width = 10
+    mood_width = 12
+    energy_width = 8
+    
+    # Header
+    table = []
+    table.append(f"  {'Rank':<{rank_width}} | {'Title':<{title_width}} | {'Artist':<{artist_width}} | {'Score':<{score_width}} | {'Mood':<{mood_width}} | {'Energy':<{energy_width}}")
+    table.append("  " + "-" * (rank_width + title_width + artist_width + score_width + mood_width + energy_width + 15))
+    
+    # Rows
+    for i, (song, score, _) in enumerate(recommendations, 1):
+        rank = f"{i}."
+        title = song['title'][:title_width]
+        artist = song['artist'][:artist_width]
+        score_str = f"{score:.2f}/10.0"
+        mood = song['mood'][:mood_width]
+        energy = f"{song['energy']:.2f}"
+        
+        row = f"  {rank:<{rank_width}} | {title:<{title_width}} | {artist:<{artist_width}} | {score_str:<{score_width}} | {mood:<{mood_width}} | {energy:<{energy_width}}"
+        table.append(row)
+    
+    return "\n".join(table)
+
+
 def main() -> None:
     # Navigate to data directory relative to project root
     csv_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "songs.csv")
@@ -89,19 +128,22 @@ def main() -> None:
         print(f"  • Prefers Acoustic: {'Yes' if user_prefs['likes_acoustic'] else 'No (Electronic)'}")
         
         print("\n" + "-"*70)
-        print("🎧 TOP 5 RECOMMENDATIONS:")
+        print("🎧 TOP 5 RECOMMENDATIONS (Quick View):")
         print("-"*70)
         
         recommendations = recommend_songs(user_prefs, songs, k=5)
-
+        
+        # Print formatted table
+        print(format_recommendations_table(recommendations, profile_name))
+        
+        print("\n💭 DETAILED EXPLANATIONS:")
+        print("-"*70)
+        
         for i, rec in enumerate(recommendations, 1):
             song, score, explanation = rec
-            print(f"\n{i}. {song['title']}")
-            print(f"   🎤 Artist: {song['artist']}")
-            print(f"   📈 Score: {score:.2f}/10.0")
-            print(f"   💭 Why:")
+            print(f"\n{i}. {song['title']} (Score: {score:.2f}/10.0)")
             for line in explanation.split("\n"):
-                print(f"      • {line}")
+                print(f"   • {line}")
         
         print("\n")
     

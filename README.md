@@ -283,7 +283,93 @@ I learned that **weights are critical**. Testing with equal weights (1.0 each) p
 
 Read full analysis in: [**Model Card**](model_card.md)
 
+## Optional Extensions: 
 
+### Challenge 1: Visual Summary Table (Implemented)
+**Description:** Improved terminal output formatting for better readability
+
+
+**Run it:**
+```bash
+python -m src.main
+```
+---
+
+### Challenge 2: Diversity & Fairness Logic (Implemented)
+**Description:** Implemented artist and genre diversity penalties to prevent recommendation monoculture
+
+**What was added:**
+- `main_diversity.py` with three ranking strategies:
+  - **Baseline**: Original algorithm (no diversity constraints)
+  - **Artist Diversity**: Penalize repeated artists (-0.8 points)
+  - **Balanced**: Penalize repeated artists AND genres (-0.8 and -0.5 respectively)
+
+**Example output comparison:**
+```
+Baseline Mode (Same Pop User):
+  1. Sunrise City     (pop)         (+6.88) 
+  2. Neon Dreams      (electronic)  (+5.34)
+  3. Rooftop Lights   (indie pop)   (+5.26)
+  4. Country Roads    (country)     (+4.79)
+  5. Gym Hero         (pop)         (+4.78)    ← Second pop song dominates top 5
+  
+Balanced Diversity Mode:
+  1. Sunrise City     (pop)         (+6.88)
+  2. Neon Dreams      (electronic)  (+5.34)
+  3. Rooftop Lights   (indie pop)   (+5.26)
+  4. Country Roads    (country)     (+4.79)
+  5. Gym Hero         (pop)         (+4.28)    ← Penalized -0.5 for genre repetition
+```
+
+**Run it:**
+```bash
+python -m src.main_diversity
+```
+
+
+---
+
+### Challenge 3: Weight Sensitivity Analysis (Already Completed in Phase 4)
+**Description:** Tested how different weight distributions change outputs
+
+**What was tested:**
+- Baseline weights: genre=3.0, mood=2.0, energy=1.5, acoustic=0.5
+- Experimental weights: genre=1.5, mood=3.5, energy=1.5, acoustic=0.5
+
+**Key finding:**
+When mood weight increases, cross-genre recommendations become competitive with same-genre recommendations. This proves that **weights encode the system's values**: high genre weight = "stay in your lane," high mood weight = "vibe match matters more than genre."
+
+**Run it:**
+```bash
+python -m src.main_experiment
+```
+
+---
+
+
+
+## Full Project Documentation
+
+- **[model_card.md](model_card.md)** — Complete Model Card with all 9 sections, detailed evaluation, and personal reflection
+- **[PROFILE_COMPARISON_ANALYSIS.md](PROFILE_COMPARISON_ANALYSIS.md)** — Comparative analysis of how different user profiles receive different recommendations
+- **Tests:** Run `pytest` to verify all core functionality
+
+---
+
+## Quick Start
+
+```bash
+# Run evaluation with all 8 diverse user profiles
+python -m src.main
+
+# Test diversity/fairness logic
+python -m src.main_diversity
+
+# Test weight sensitivity
+python -m src.main_experiment
+
+# Run unit tests
+pytest
 ---
 
 ## 7. `model_card_template.md`
